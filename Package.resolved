@@ -1,0 +1,32 @@
+{
+  "pins" : [
+    {
+      "identity" : "foundationex",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Zean-Technology-Co-Ltd/FoundationEx.git",
+      "state" : {
+        "revision" : "8bb865c019a0225117ba73b5c16e3ce8f23ac5cb",
+        "version" : "1.0.7"
+      }
+    },
+    {
+      "identity" : "nntoast",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Zean-Technology-Co-Ltd/NNToast.git",
+      "state" : {
+        "revision" : "21c61ea65967d9ccf7eb3d313af5599d3791163c",
+        "version" : "1.0.2"
+      }
+    },
+    {
+      "identity" : "rxswift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ReactiveX/RxSwift.git",
+      "state" : {
+        "revision" : "9dcaa4b333db437b0fbfaf453fad29069044a8b4",
+        "version" : "6.6.0"
+      }
+    }
+  ],
+  "version" : 2
+}
