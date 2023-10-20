@@ -13,6 +13,7 @@ let package = Package(
         .package(url: "https://github.com/ReactiveX/RxSwift.git", .upToNextMajor(from: "6.2.0")),
         .package(url: "https://github.com/Zean-Technology-Co-Ltd/FoundationEx.git", .upToNextMajor(from: "1.0.0")),
         .package(url: "https://github.com/Zean-Technology-Co-Ltd/NNToast.git", .upToNextMajor(from: "1.0.0")),
+        .package(url: "https://github.com/ReactorKit/ReactorKit.git", .upToNextMajor(from: "3.0.0")),
     ],
     targets: [
         .target(
@@ -20,8 +21,10 @@ let package = Package(
             dependencies: [
               "RxSwift",
               "NNToast",
+              "ReactorKit",
               .product(name: "RxCocoa", package: "RxSwift"),
               .product(name: "Toast", package: "NNToast"),
+              .product(name: "HUD", package: "NNToast"),
               "FoundationEx"
             ]),
         .testTarget(
