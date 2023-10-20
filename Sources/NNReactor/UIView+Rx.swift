@@ -8,6 +8,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import HUD
 
 extension Reactive where Base: UICollectionReusableView {
     // 提供给外界重用序列
@@ -151,4 +152,31 @@ extension Reactive where Base: UITableViewCell {
             })
         return bag
     }
+}
+
+public extension Reactive where Base: UIView {
+    
+    var isLoading: Binder<Bool> {
+        return Binder(self.base) { component, loading in
+            if loading {
+                component.startLoading()
+            } else {
+                component.stopLoading()
+            }
+        }
+    }
+}
+
+extension UIView {
+    
+    public final func startLoading() {
+        HUD.wait()
+    }
+    /**
+     Remove UI blocker.
+     */
+    public final func stopLoading() {
+        HUD.clear()
+    }
+
 }
